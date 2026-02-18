@@ -295,3 +295,8 @@ Após a identificação das melhorias, as seguintes ações foram tomadas imedia
     - **Motivação:** Com a migração bem-sucedida para VPS própria via EasyPanel, os arquivos de configuração do Vercel tornaram-se obsoletos e poluíam o projeto.
     - **Arquivos Removidos:** `vercel.json`, `app.py` (raiz), `tests/reproduce_vercel_bug.py` e diretório `builds/`.
     - **Resultado:** Código mais limpo e focado na infraestrutura de produção atual (Docker/Gunicorn).
+
+12. **Esclarecimento: Lógica de Precificação (2026-02-18 18:55)**
+    - **Critério de Cálculo:** Confirmação de que a margem de lucro incide sobre a soma da matéria-prima e da mão de obra.
+    - **Fórmula:** `(Custo de Materiais + Custo de Mão de Obra) * (1 + Margem de Lucro / 100)`.
+    - **Verificação:** Validado nos arquivos `execution/mdf_calculator.py` e `web/static/js/pricing.js`.
