@@ -1,4 +1,4 @@
-# Walkthrough — Correções de Bugs do Calculador MDF
+# Walkthrough — Canhizares MDF: Histórico de Desenvolvimento
 
 ## Resumo
 

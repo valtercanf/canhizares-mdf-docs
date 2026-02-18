@@ -1,4 +1,4 @@
-# Project Timeline & Tasks
+# Canhizares MDF — Project Timeline & Tasks
 
 ## [PHASE 1] INITIAL SETUP & CORE LOGIC
 - [x] Verified Python environment (py command)

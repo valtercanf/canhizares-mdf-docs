@@ -1,6 +1,6 @@
-# Projeto MDF Antigravity (Móveis Planejados & Serralheria)
+# Canhizares MDF — Sistema de Orçamento (Móveis Planejados & Serralheria)
 
-Bem-vindo ao sistema de orçamento do projeto **MDF Antigravity**.
+Bem-vindo ao sistema de orçamento **Canhizares MDF**.
 Este projeto visa calcular custos, precificação e detalhamento de materiais para marcenaria (MDF) e serralheria (Metalon/Chapa).
 
 ## Status Atual
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 ## Estrutura de Arquivos Importantes
 
 ```
-mdf-antigravity/
+canhizares-mdf/
 ├── web/
 │   ├── app.py                  # Backend Flask (Rotas e API)
 │   ├── templates/
