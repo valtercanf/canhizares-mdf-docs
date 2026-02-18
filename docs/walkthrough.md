@@ -278,12 +278,15 @@ Após a identificação das melhorias, as seguintes ações foram tomadas imedia
     *   **Solução:** Atualizado `web/app.py` e `main.js` para capturar e processar dados de precificação corretamente.
     *   **Resultado:** ✅ Excel agora inclui linhas de "MÃO DE OBRA", "LUCRO" e "PREÇO FINAL".
 
-8.  **Melhoria: Validação e Exportação Dinâmica de Excel (2026-02-18 15:52)**
-    *   **Problema:** Editar o campo "Tempo (min)" após o cálculo não atualizava o Excel exportado.
-    *   **Solução:**
-        - Criado `web/static/js/pricing.js` com lógica modular de validação e exportação.
-        - `main.js` refatorado para expor `window.collectFormData()`, reutilizável pelo módulo de pricing.
-        - Botão "Baixar Excel" agora valida os 3 campos (Mão de Obra, Tempo, Lucro) antes de exportar.
-        - Se algum campo estiver zerado, exibe alerta: *"Para gerar o Excel com precificação, preencha: Mão de Obra, Tempo e Lucro"*.
-        - Ao clicar em "Baixar Excel", o sistema coleta os dados atuais do formulário (incluindo pricing) e gera um Excel fresco via `/api/export_excel`.
-    *   **Verificado via script:** Excel gerado contém "MÃO DE OBRA", "LUCRO" e "PREÇO FINAL" com valores corretos.
+9.  **Segurança: Sistema de Autenticação (2026-02-18 17:55)**
+    - **Login Modular:** Implementado modal de login no canto superior direito, acessível via botão "Entrar" na navbar.
+    - **Níveis de Acesso:**
+        - **Admin:** Acesso total (Cálculo e Estoque).
+        - **Cliente:** Acesso restrito apenas à Calculadora.
+    - **Proteção de Rotas:** Rota `/estoque` protegida por login e verificação de privilégios.
+    - **Persistência Local:** Usuários e hashes bcrypt armazenados em `data/users.json`.
+
+10. **Infraestrutura: Deploy no EasyPanel (2026-02-18 17:55)**
+    - **Dockerização:** Criados `Dockerfile`, `docker-compose.yml` e `docker-entrypoint.sh`.
+    - **Persistência:** Configurador volumes Docker para garantir que `prices.json` e `history.json` não sejam perdidos em reinicializações do servidor.
+    - **Workflow de Deploy:** Automatizado processo via EasyPanel apontando para o branch `master`.
