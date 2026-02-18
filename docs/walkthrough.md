@@ -291,3 +291,7 @@ Após a identificação das melhorias, as seguintes ações foram tomadas imedia
     - **Dockerização:** Criados `Dockerfile`, `docker-compose.yml` e `docker-entrypoint.sh`.
     - **Persistência:** Configurador volumes Docker para garantir que `prices.json` e `history.json` não sejam perdidos em reinicializações do servidor.
     - **Workflow de Deploy:** Automatizado processo via EasyPanel apontando para o branch `master`.
+11. **Encerramento de Suporte ao Vercel (2026-02-18 18:15)**
+    - **Motivação:** Com a migração bem-sucedida para VPS própria via EasyPanel, os arquivos de configuração do Vercel tornaram-se obsoletos e poluíam o projeto.
+    - **Arquivos Removidos:** `vercel.json`, `app.py` (raiz), `tests/reproduce_vercel_bug.py` e diretório `builds/`.
+    - **Resultado:** Código mais limpo e focado na infraestrutura de produção atual (Docker/Gunicorn).

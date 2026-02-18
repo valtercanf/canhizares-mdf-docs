@@ -295,3 +295,4 @@
 - [x] **Auth (2026-02-18 17:55):** Sistema de login com modal (canto superior direito) e dois níveis de acesso.
 - [x] **Infra (2026-02-18 17:55):** Configurado Dockerfile e docker-compose.yml para deploy no EasyPanel.
 - [x] **Auth (2026-02-18 18:05):** Ativado "Modo Aberto" para testes (login visual mantido, mas acesso livre a todas as páginas).
+- [x] **Cleanup (2026-02-18 18:15):** Removidos arquivos e dependências legadas do Vercel (`vercel.json`, entrypoint root, etc.) em favor do EasyPanel.
