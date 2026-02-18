@@ -285,6 +285,7 @@ Após a identificação das melhorias, as seguintes ações foram tomadas imedia
         - **Cliente:** Acesso restrito apenas à Calculadora.
     - **Proteção de Rotas:** Rota `/estoque` protegida por login e verificação de privilégios.
     - **Persistência Local:** Usuários e hashes bcrypt armazenados em `data/users.json`.
+    - **Modo Aberto (Teste):** Temporariamente, todas as rotas e o menu "Estoque" estão acessíveis sem login para facilitar os testes de cálculo solicitados pelo usuário (2026-02-18 18:05).
 
 10. **Infraestrutura: Deploy no EasyPanel (2026-02-18 17:55)**
     - **Dockerização:** Criados `Dockerfile`, `docker-compose.yml` e `docker-entrypoint.sh`.

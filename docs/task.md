@@ -292,5 +292,6 @@
 - [x] **Melhoria (2026-02-18 15:52):** Validação de precificação antes de exportar Excel. Criado `pricing.js` modular. `main.js` refatorado com `collectFormData()`. Excel agora é gerado dinamicamente com dados atuais do formulário.
 
 - [x] **Infra (2026-02-18 16:26):** Configurado GitHub Action (`sync-docs.yml`) para sincronizar automaticamente `README.md` e `docs/` para repositório público `canhizares-mdf-docs` a cada push no `master`.
-- [x] **Auth (2026-02-18 17:55):** Sistema de login com modal (canto superior direito) e dois níveis de acesso (Admin e Cliente).
-- [x] **Infra (2026-02-18 17:55):** Configurado Dockerfile e docker-compose.yml para deploy com persistência de dados no EasyPanel.
+- [x] **Auth (2026-02-18 17:55):** Sistema de login com modal (canto superior direito) e dois níveis de acesso.
+- [x] **Infra (2026-02-18 17:55):** Configurado Dockerfile e docker-compose.yml para deploy no EasyPanel.
+- [x] **Auth (2026-02-18 18:05):** Ativado "Modo Aberto" para testes (login visual mantido, mas acesso livre a todas as páginas).
