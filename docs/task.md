@@ -362,7 +362,7 @@
 - [x] **Optimization:** Separação total do consumo de fita por cor no orquestrador de materiais.
 
 ## [PHASE 23] PADRONIZAÇÃO DE VERSÃO (22/02/2026)
-- [x] **UI:** Atualizar tag de versão de `V4.0-carnaval` para `v5` no site.
+- [x] **UI:** Atualizar tag de versão para `v5.1` no site.
 - [x] **Backend:** Adicionar timezone de Brasília `(GMT-3)` na exibição da data do commit.
 - [x] **Automation:** Configurar `app.py` para injetar o timezone dinamicamente.
 

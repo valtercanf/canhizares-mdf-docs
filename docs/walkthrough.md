@@ -146,8 +146,8 @@ TOTAL:                                         R$974,33
 - **Cores Mistas**: Lógica profissional de acabamento — ripa na cor do tampo com fita na cor da estrutura.
 - **Fixação**: Inclusão de 8 parafusos extras no orçamento.
 
-### 17. Padronização de Versão e Timezone (22/02/2026 16:10)
-- **Tag de Versão**: Atualizado de `V4.0-carnaval` para `v5` em todo o frontend (`index.html` e `inventory.html`).
+### 17. Padronização de Versão Real (v5.1) (22/02/2026 17:20)
+- **Tag de Versão**: Atualizado para `v5.1` em todo o frontend e documentação.
 - **Fuso Horário**: A data do commit agora exibe explicitamente o timezone de Brasília `(GMT-3)`.
 - **Backend**: Refatorada a função `get_last_commit_date` em `app.py` para injetar o sufixo de fuso horário automaticamente.
 
@@ -170,4 +170,4 @@ TOTAL:                                         R$974,33
   3. Otimizar a performance da lista de materiais com filtros de busca no servidor.
 
 ---
-**Status Final**: Sistema V5.0 validado tecnicamente, estável e pronto para produção em modo local.
+**Status Final**: Sistema V5.1 certificado matematicamente, timezone corrigido para Brasília (GMT-3) e suporte a engrosso customizado.
