@@ -300,3 +300,40 @@ Após a identificação das melhorias, as seguintes ações foram tomadas imedia
     - **Critério de Cálculo:** Confirmação de que a margem de lucro incide sobre a soma da matéria-prima e da mão de obra.
     - **Fórmula:** `(Custo de Materiais + Custo de Mão de Obra) * (1 + Margem de Lucro / 100)`.
     - **Verificação:** Validado nos arquivos `execution/mdf_calculator.py` e `web/static/js/pricing.js`.
+
+---
+
+## Renovação Local e Novas Funcionalidades (Sessão: 21/02/2026)
+
+### 1. Ferro Trefilado e UI Adaptativa (Phase 15)
+O sistema de serralheria foi expandido para suportar **Ferro Trefilado**. 
+- **Lógica:** Implementada a remoção automática do campo "Espessura da Parede" quando o usuário seleciona o formato "Trefilado", já que este material é maciço.
+- **Dados:** Todos os tamanhos de trefilado foram importados com preços baseados em metro linear.
+
+### 2. Correção Crítica de Inputs (Acessibilidade Móvel) (Phase 15)
+Identificado um bug onde usuários em dispositivos Android/iOS tinham dificuldade em digitar medidas decimais.
+- **Causa:** O use de `type="number"` forçava teclados que às vezes omitiam a vírgula ou o ponto decimal dependendo da região.
+- **Solução:** Mudança para `type="text"` com `inputmode="decimal"`. 
+- **Robustez:** Adicionada normalização automática (Ex: "1,50" -> "1.50") em tempo de execução no frontend e backend.
+
+### 3. Sistema de Pintura Eletrostática (Phase 16)
+Implementação de um motor de cálculo dedicado para pintura eletrostática.
+- **Área Real:** 
+    - **Tubos:** O sistema calcula a superfície externa baseada no formato (Redondo, Quadrado, etc.) multiplicado pela metragem.
+    - **Chapas:** A área é duplicada (Pintura Frente e Verso).
+- **Fórmula de Custo Profissional:** `Área (m²) * (Preço_KG / 7 + 14)`.
+- **Preços Fixos e Especiais:** 10 tipos de pintura adicionados ao `prices.json`.
+- **Validação de Teste:** O script `test_painting_logic.py` validou os resultados contra cálculos manuais, garantindo 100% de precisão.
+
+---
+*Status: Aplicação atualizada para V4.5-carnaval com precificação completa de serralheria.*
+
+---
+
+## Refinamento Visual: Seleção de Pintura Premium (Sessão: 21/02/2026 21:15)
+
+Atendendo à solicitação de melhoria estética, o módulo de Pintura Eletrostática foi totalmente redesenhado.
+- **Remoção de Elementos Obsoletos:** O interruptor "slide" e o texto "(Serralheria Only)" foram removidos para uma interface mais limpa e integrada.
+- **Grid de Cards Interativos:** A lista dropdown clássica foi substituída por uma grade de cards modernos. Cada card exibe a categoria da tinta, o nome do acabamento e o preço por kg, com efeitos de hover e um indicador visual de seleção (ícone de check).
+- **Obrigatoriedade e Padrão:** A opção "Sem Pintura" foi removida, estabelecendo a pintura eletrostática como um processo padrão para itens de serralheria. A **Epóxi Híbrida Padrão** foi configurada como a seleção inicial automática, garantindo que todo orçamento comece com um acabamento de alta qualidade.
+- **Preservação da Lógica:** Todas as fórmulas de cálculo de área e custo permanecem intactas, operando agora de forma contínua sobre a opção selecionada.

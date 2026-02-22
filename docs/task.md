@@ -297,3 +297,27 @@
 - [x] **Auth (2026-02-18 18:05):** Ativado "Modo Aberto" para testes (login visual mantido, mas acesso livre a todas as páginas).
 - [x] **Cleanup (2026-02-18 18:15):** Removidos arquivos e dependências legadas do Vercel (`vercel.json`, entrypoint root, etc.) em favor do EasyPanel.
 - [x] **Clarificação (2026-02-18 18:55):** Esclarecimento sobre a base de cálculo da margem de lucro (Matéria-prima + Mão de Obra).
+## [PHASE 14] NEW VERSION & LOCAL TESTING (2026-02-21)
+- [x] **Setup:** Preparar ambiente local e verificar dependências.
+- [x] **Service:** Iniciar servidor Flask local (localhost:5000).
+- [x] **Verify:** Rodar `run_system_tests.py` (3/3 passando).
+
+## [PHASE 15] METALWORK REFINEMENT & INPUT BUGFIX (2026-02-21)
+- [x] **Serralheria:** Implementar suporte a Ferro Trefilado.
+- [x] **UI:** Ocultar dinamicamente o campo "Parede" para Trefilados.
+- [x] **Bugfix:** Corrigir inputs de medida que não aceitavam dígitos/vírgulas em dispositivos móveis.
+- [x] **Normalization:** Implementar tratamento de Decimais (Vírgula para Ponto) em todo o sistema.
+
+## [PHASE 16] ELECTROSTATIC PAINTING (2026-02-21)
+- [x] **Logic:** Criar `painting_calculator.py` com cálculo de área e custo dinâmico.
+- [x] **DB:** Adicionar 10 novos materiais de pintura ao `prices.json`.
+- [x] **UI:** Adicionar seção de Pintura no formulário de Serralheria.
+- [x] **Inventory:** Criar aba "Pintura" no gerenciamento de estoque.
+- [x] **Verify:** Validar cálculos via `test_painting_logic.py` (Área externa para tubos, Face dupla para chapas).
+
+## [PHASE 17] PAINTING UI REFINEMENT (2026-02-21 21:10)
+- [x] **UI:** Remover texto redundant "(Serralheria Only)" do título.
+- [x] **UX:** Remover botão de slide (toggle) de ativação.
+- [x] **Design:** Substituir dropdown por grid de cards interativos com efeitos de hover e seleção premium.
+- [x] **Config:** Remover opção "Sem Pintura" e definir "Epóxi Híbrida Padrão" como seleção obrigatória inicial.
+- [x] **Logic:** Adaptar `main.js` para coletar dados da grade de cards.

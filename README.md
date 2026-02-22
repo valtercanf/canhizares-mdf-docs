@@ -35,6 +35,9 @@ O sistema está **completo e funcional**, incluindo backend Python, interface we
 | Phase 11 | Histórico de Cálculos (History Viewer) | ✅ Concluído |
 | Phase 12 | Testes E2E com Playwright | ✅ Concluído |
 | Phase 13 | Refatoração Frontend Modular + Precificação Excel | ✅ Concluído |
+| Phase 14 | Preparação Local & Testes de Sistema | ✅ Concluído |
+| Phase 15 | Refinamento Serralheria & Correção de Inputs | ✅ Concluído |
+| Phase 16 | Pintura Eletrostática na Serralheria | ✅ Concluído |
 
 > Para o detalhamento completo de cada fase, acesse [docs/task.md](docs/task.md).
 
@@ -43,11 +46,13 @@ O sistema está **completo e funcional**, incluindo backend Python, interface we
 ## Funcionalidades Implementadas
 - **Cálculo de MDF:** Otimização para diferentes espessuras (3mm-25mm) e cores.
 - **Cálculo de Insumos:** Cola (área), Fita de Borda (perímetro) e Parafusos automáticos.
-- **Serralheria V4.0:** Cálculo completo de Tubos (Metalon) e Chapas de Aço (Fria/Quente).
+- **Serralheria V4.5:** Cálculo completo de Tubos (Metalon), Chapas de Aço e **Pintura Eletrostática**.
+- **Pintura Eletrostática:** Lógica profissional baseada em área real (Perímetro para tubos, Face dupla para chapas) e fórmula de custo dinâmico.
 - **Precificação Completa:** Custo Material + Mão de Obra + Lucro = Preço de Venda.
 - **Exportação Excel:** Relatório detalhado com validação obrigatória dos campos de precificação.
-- **Inventory Matrix (Fev 2026):** Base de dados atualizada com preços reais de mercado.
-- **Sistema de Testes:** Suíte automatizada (`run_system_tests.py`) para validação de lógica e dados.
+- **Inventory Matrix (Fev 2026):** Base de dados atualizada com preços reais de mercado e nova aba de Pintura.
+- **Correção de Inputs:** Sistema robusto para entrada de medidas decimais (vírgula/ponto) em dispositivos móveis.
+- **Sistema de Testes:** Suíte automatizada (`run_system_tests.py` e `test_painting_logic.py`) para validação de lógica e dados.
 - **Busca Inteligente:** Integração com Google Shopping para encontrar referências de preço rapidamente.
 - **Detecção de Marca:** Identificação automática da marca no site para atualizar a coluna correta na matriz.
 - **Histórico de Cálculos:** Salva e restaura cálculos anteriores via modal.
