@@ -367,6 +367,9 @@
 - [x] **Automation:** Configurar `app.py` para injetar o timezone dinamicamente.
 
 ## [PHASE 24] MODO OFFLINE (JSON FEEDBACK) (22/02/2026)
-- [x] **Pivot:** Desativar temporariamente a integração com Supabase.
-- [x] **Fallback:** Garantir que o sistema utilize `prices.json` e `history.json` locais como fonte primária.
 - [x] **Verify:** Validar exibição do estoque via arquivos locais após a mudança.
+
+## [PHASE 25] TRANSPARÊNCIA TÉCNICA (22/02/2026)
+- [x] **UI:** Adicionar badge informativo de "Taxa de Perda de 15%" no site.
+- [x] **Excel:** Incluir campo "TAXA DE PERDA" no cabeçalho do relatório gerado.
+- [x] **Deploy:** Sincronizar alterações com GitHub para redeploy.
