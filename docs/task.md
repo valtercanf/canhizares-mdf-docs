@@ -330,7 +330,7 @@
 
 ## [PHASE 19] MIGRATION TO SUPABASE (2026-02-22 09:50)
 - [x] **Setup:** Configurar projeto no Supabase e definir schema das tabelas (Profiles, Materials, Prices, Calculations).
-- [x] **Security:** Implementar Row Level Security (RLS) no banco de dados.
+- [ ] **Security:** Ativar Row Level Security (RLS) e configurar políticas para acesso via Anon Key.
 - [x] **Migration:** Criar script `migrate_to_supabase.py` para converter JSONs atuais para PostgreSQL.
 - [x] **Integration:** Instalar biblioteca cliente e atualizar backend Flask (`app.py`) para CRUD via Supabase.
 - [x] **Scalability:** Implementar tabelas de Clientes e Projetos para organização profissional.

@@ -345,10 +345,10 @@ Atendendo à solicitação de melhoria estética, o módulo de Pintura Eletrost�
 A aplicação evoluiu de um sistema baseado em arquivos JSON locais para uma infraestrutura robusta de banco de dados relacional com **Supabase (PostgreSQL)**.
 
 ### Melhorias Implementadas:
-- **Persistência Global:** Acabou o problema de dessincronização entre redeploys no EasyPanel. Os dados agora residem em um banco de dados externo persistente.
+- **Persistência Global:** Acabou o problema de dessincronização entre redeploys no EasyPanel. Os dados de materiais, preços e **histórico de cálculos** agora residem em um banco de dados externo persistente.
 - **Alta Performance (Bulk Fetching):** O backend foi otimizado para carregar todos os materiais e históricos em uma única requisição, eliminando gargalos de rede.
 - **Base para Escalabilidade:** O novo schema permite a criação futura de perfis de usuários por empresa, gestão de estoque por obra e integração com CRM.
-- **Segurança de Dados:** Implementação inicial de validação via API REST com suporte a Row Level Security (RLS) no banco de dados.
+- **Histórico de Orçamentos:** Todos os cálculos gerados são registrados no Supabase, permitindo a restauração e consulta retroativa de qualquer projeto salvo.
 
 ### O que foi migrado:
 - **133 Materiais:** Categorizados e estruturados.
