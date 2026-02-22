@@ -365,3 +365,8 @@
 - [x] **UI:** Atualizar tag de versão de `V4.0-carnaval` para `v5` no site.
 - [x] **Backend:** Adicionar timezone de Brasília `(GMT-3)` na exibição da data do commit.
 - [x] **Automation:** Configurar `app.py` para injetar o timezone dinamicamente.
+
+## [PHASE 24] MODO OFFLINE (JSON FEEDBACK) (22/02/2026)
+- [x] **Pivot:** Desativar temporariamente a integração com Supabase.
+- [x] **Fallback:** Garantir que o sistema utilize `prices.json` e `history.json` locais como fonte primária.
+- [x] **Verify:** Validar exibição do estoque via arquivos locais após a mudança.

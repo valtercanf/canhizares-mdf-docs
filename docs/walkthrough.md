@@ -156,5 +156,10 @@ TOTAL:                                         R$974,33
 - **Solução**: Atualizado `main.js` para capturar e sanitizar os valores dos inputs de cada módulo antes de processar o cálculo.
 - **Sincronia**: Alteração enviada para o GitHub para atualização imediata via EasyPanel.
 
+### 19. Pivot Tecnológico: Retorno ao JSON Local (22/02/2026 16:45)
+- **Desativação do Supabase**: Devido a instabilidades de infraestrutura (503), a integração com o Supabase foi pausada.
+- **Modo Offline**: O backend (`app.py`) foi configurado para ignorar o Supabase e utilizar exclusivamente o `prices.json` (estoque) e `history.json` (histórico de cálculos).
+- **Estabilidade**: Esta mudança garante que o estoque apareça corretamente para o usuário, independentemente de conexões externas.
+
 ---
-**Status Final**: Sistema V5.0 estável, maduro e com lógica de marcenaria de alto nível, pronto para uso profissional.
+**Status Final**: Sistema V5.0 operando em modo local (JSON), garantindo 100% de disponibilidade e estabilidade imediata.
