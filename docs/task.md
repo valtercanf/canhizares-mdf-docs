@@ -70,8 +70,14 @@
     - [x] Implementar script de teste unificado (`run_system_tests.py`)
     - [x] Testar cálculo de MDF
     - [x] Testar cálculo de fita de borda
-    - [x] Testar cálculo de ferragens
-    - [x] Testar integridade do `prices.json`
+    - [x] Corrigir persistência de cálculos no Supabase (incluindo `/api/history`)
+- [x] Corrigir bug do Ferro Trefilado e Tubos (Área/Preço 0)
+    - [x] Pesquisar IDs e unidades no banco de dados Supabase
+    - [x] Atualizar plano de implementação com detalhes técnicos
+    - [x] Corrigir geração de `mat_id` no `mdf_calculator.py`
+    - [x] Padronizar unidade para "metro linear" e ajustar preços
+    - [x] Validar correção com script de teste e na UI
+- [x] Atualizar Walkthrough com as correções
 - [x] **Documentação**
     - [x] Atualizar `README.md` com novas features
     - [x] Atualizar `walkthrough.md` com resultados dos testes
@@ -335,3 +341,27 @@
 - [x] **Integration:** Instalar biblioteca cliente e atualizar backend Flask (`app.py`) para CRUD via Supabase.
 - [x] **Scalability:** Implementar tabelas de Clientes e Projetos para organização profissional.
 - [x] **Storage:** Configurar Supabase Storage para armazenamento de anexos e desenhos técnicos.
+
+## [PHASE 20] REFORÇO DE QUALIDADE E MODULARIZAÇÃO (2026-02-22)
+- [x] **Refactor:** Segmentar `mdf_calculator.py` em submódulos especializados (`drawers`, `doors`, `metalwork`, etc.).
+- [x] **UI:** Agrupamento de peças no detalhamento por Módulo e Categoria para maior clareza técnica.
+- [x] **Precision:** Implementação de `parseDecimal` para suportar vírgulas e ajuste de precisão em chapas de aço.
+- [x] **Design:** Harmonização do Detalhamento com o Dark Mode (CSS Refinement).
+
+## [PHASE 21] FLEXIBILIDADE E ENGROSSO (2026-02-22)
+- [x] **UI:** Divisão unificada de "Tampo/Base" em seleções independentes de "Tampo Superior" e "Base Inferior".
+- [x] **Feature:** Implementação de Checkbox condicional para "Engrosso" (moldura de 5cm) em tampos.
+- [x] **Logic:** Geração automática de 4 réguas de moldura no backend para tampos engrossados.
+- [x] **Verify:** Validação de custos e dimensões no relatório Excel.
+
+## [PHASE 22] ACABAMENTO PROFISSIONAL (RIPAS DE LIGAÇÃO) (2026-02-22)
+- [x] **Logic:** Algoritmo de detecção automática de contraste de cor entre o Tampo e a Estrutura do móvel.
+- [x] **Feature:** Geração automática de 2 Ripas de Ligação (MDF 15mm) na cor do tampo para união de módulos.
+- [x] **Finishing:** Lógica de "Cores Mistas" — Peça na cor do tampo com fita de borda na cor da estrutura.
+- [x] **Hardware:** Inclusão automática de 8 parafusos de fixação extras no orçamento.
+- [x] **Optimization:** Separação total do consumo de fita por cor no orquestrador de materiais.
+
+## [PHASE 23] PADRONIZAÇÃO DE VERSÃO (22/02/2026)
+- [x] **UI:** Atualizar tag de versão de `V4.0-carnaval` para `v5` no site.
+- [x] **Backend:** Adicionar timezone de Brasília `(GMT-3)` na exibição da data do commit.
+- [x] **Automation:** Configurar `app.py` para injetar o timezone dinamicamente.

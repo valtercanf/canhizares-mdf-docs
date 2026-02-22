@@ -38,6 +38,12 @@ O sistema está **completo e funcional**, incluindo backend Python, interface we
 | Phase 14 | Preparação Local & Testes de Sistema | ✅ Concluído |
 | Phase 15 | Refinamento Serralheria & Correção de Inputs | ✅ Concluído |
 | Phase 16 | Pintura Eletrostática na Serralheria | ✅ Concluído |
+| Phase 17 | Refinamento UI Pintura Premium | ✅ Concluído |
+| Phase 18 | Ferramenta de Sincronização de Emergência | ✅ Concluído |
+| Phase 19 | Migração para Supabase (Database Persistente) | ✅ Concluído |
+| Phase 20 | Refatoração Modular & Agrupamento Visual | ✅ Concluído |
+| Phase 21 | Estruturas Flexíveis & Engrosso de Tampo | ✅ Concluído |
+| Phase 22 | Ripas de Ligação & Cores Mistas | ✅ Concluído |
 
 > Para o detalhamento completo de cada fase, acesse [docs/task.md](docs/task.md).
 
@@ -45,17 +51,15 @@ O sistema está **completo e funcional**, incluindo backend Python, interface we
 
 ## Funcionalidades Implementadas
 - **Cálculo de MDF:** Otimização para diferentes espessuras (3mm-25mm) e cores.
+- **Automatização de Fornecedores:** O sistema seleciona automaticamente o menor preço disponível no estoque.
+- **Engrosso de Tampo:** Moldura de moldura de 5cm automática para tampos superiores.
+- **Ripas de Ligação:** Geração de ripas para tampos de cores diferentes com acabamento coordenado (fita na cor da estrutura).
 - **Cálculo de Insumos:** Cola (área), Fita de Borda (perímetro) e Parafusos automáticos.
-- **Serralheria V4.5:** Cálculo completo de Tubos (Metalon), Chapas de Aço e **Pintura Eletrostática**.
-- **Pintura Eletrostática:** Lógica profissional baseada em área real (Perímetro para tubos, Face dupla para chapas) e fórmula de custo dinâmico.
-- **Precificação Completa:** Custo Material + Mão de Obra + Lucro = Preço de Venda.
-- **Exportação Excel:** Relatório detalhado com validação obrigatória dos campos de precificação.
-- **Inventory Matrix (Fev 2026):** Base de dados atualizada com preços reais de mercado e nova aba de Pintura.
-- **Correção de Inputs:** Sistema robusto para entrada de medidas decimais (vírgula/ponto) em dispositivos móveis.
-- **Sistema de Testes:** Suíte automatizada (`run_system_tests.py` e `test_painting_logic.py`) para validação de lógica e dados.
-- **Busca Inteligente:** Integração com Google Shopping para encontrar referências de preço rapidamente.
-- **Detecção de Marca:** Identificação automática da marca no site para atualizar a coluna correta na matriz.
-- **Histórico de Cálculos:** Salva e restaura cálculos anteriores via modal.
+- **Serralheria V5.0:** Tubos (Metalon), Ferro Trefilado e Chapas com **Pintura Eletrostática**.
+- **Supabase Integration:** Banco de dados persistente para Materiais, Preços e Histórico.
+- **Detalhamento Agrupado:** Peças organizadas por Módulo e Categoria (Estrutura, Portas, etc.).
+- **Precificação Profissional:** Custo Material + Mão de Obra + Lucro = Preço de Venda.
+- **Exportação Excel:** Relatório completo com fornecedores e precificação detalhada.
 
 ## Como Rodar o Projeto
 
