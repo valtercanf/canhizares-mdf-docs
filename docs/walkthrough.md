@@ -161,5 +161,13 @@ TOTAL:                                         R$974,33
 - **Modo Offline**: O backend (`app.py`) foi configurado para ignorar o Supabase e utilizar exclusivamente o `prices.json` (estoque) e `history.json` (histórico de cálculos).
 - **Estabilidade**: Esta mudança garante que o estoque apareça corretamente para o usuário, independentemente de conexões externas.
 
+### 20. Bateria de Testes Automatizada (API V5.0) (22/02/2026 16:55)
+- **Cálculo Complexo**: Validado com sucesso. O sistema gerou corretamente o Engrosso de Tampo, as Ripas de Ligação e detectou a Pintura Eletrostática na Serralheria.
+- **Modo Offline (JSON)**: Confirmado. O inventário carregou 133 materiais do arquivo local e o histórico de cálculos persistiu corretamente.
+- **Pontos de Melhoria Identificados**:
+  1. Implementar variável de ambiente `ENABLE_SUPABASE` para facilitar o chaveamento futuro.
+  2. Adicionar validação de espessura de MDF no backend como camada extra de segurança.
+  3. Otimizar a performance da lista de materiais com filtros de busca no servidor.
+
 ---
-**Status Final**: Sistema V5.0 operando em modo local (JSON), garantindo 100% de disponibilidade e estabilidade imediata.
+**Status Final**: Sistema V5.0 validado tecnicamente, estável e pronto para produção em modo local.
