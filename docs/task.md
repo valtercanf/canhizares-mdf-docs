@@ -373,3 +373,9 @@
 - [x] **UI:** Adicionar badge informativo de "Taxa de Perda de 15%" no site.
 - [x] **Excel:** Incluir campo "TAXA DE PERDA" no cabeçalho do relatório gerado.
 - [x] **Deploy:** Sincronizar alterações com GitHub para redeploy.
+
+## [PHASE 26] ENGROSSO CUSTOMIZADO (22/02/2026)
+- [x] **UI:** Adicionar input de "Espessura Alvo" condicional no engrosso de tampos.
+- [x] **JS:** Coletar `target_thickness` e enviar para o backend.
+- [x] **Backend:** Implementar lógica de múltiplas camadas de réguas (15mm cada) para atingir a espessura alvo.
+- [x] **Verify:** Validar cálculos de área e fitagem para tampos com diferentes espessuras finais.
