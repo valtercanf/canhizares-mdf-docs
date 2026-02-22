@@ -321,3 +321,17 @@
 - [x] **Design:** Substituir dropdown por grid de cards interativos com efeitos de hover e seleção premium.
 - [x] **Config:** Remover opção "Sem Pintura" e definir "Epóxi Híbrida Padrão" como seleção obrigatória inicial.
 - [x] **Logic:** Adaptar `main.js` para coletar dados da grade de cards.
+
+## [PHASE 18] EMERGENCY SYNC TOOL (2026-02-21 22:15)
+- [x] **Backend:** Criar rota `/admin/import-data` para sobrescrever `prices.json`.
+- [x] **Frontend:** Adicionar botão "Sync Emergência" na página de Estoque.
+- [x] **UX:** Implementar lógica de upload de JSON com confirmação de segurança.
+- [x] **Deploy:** Realizar push para o GitHub para permitir atualização no EasyPanel via Redeploy.
+
+## [PHASE 19] MIGRATION TO SUPABASE (2026-02-22 09:50)
+- [x] **Setup:** Configurar projeto no Supabase e definir schema das tabelas (Profiles, Materials, Prices, Calculations).
+- [x] **Security:** Implementar Row Level Security (RLS) no banco de dados.
+- [x] **Migration:** Criar script `migrate_to_supabase.py` para converter JSONs atuais para PostgreSQL.
+- [x] **Integration:** Instalar biblioteca cliente e atualizar backend Flask (`app.py`) para CRUD via Supabase.
+- [x] **Scalability:** Implementar tabelas de Clientes e Projetos para organização profissional.
+- [x] **Storage:** Configurar Supabase Storage para armazenamento de anexos e desenhos técnicos.

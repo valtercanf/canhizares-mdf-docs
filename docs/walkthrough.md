@@ -337,3 +337,20 @@ Atendendo à solicitação de melhoria estética, o módulo de Pintura Eletrost�
 - **Grid de Cards Interativos:** A lista dropdown clássica foi substituída por uma grade de cards modernos. Cada card exibe a categoria da tinta, o nome do acabamento e o preço por kg, com efeitos de hover e um indicador visual de seleção (ícone de check).
 - **Obrigatoriedade e Padrão:** A opção "Sem Pintura" foi removida, estabelecendo a pintura eletrostática como um processo padrão para itens de serralheria. A **Epóxi Híbrida Padrão** foi configurada como a seleção inicial automática, garantindo que todo orçamento comece com um acabamento de alta qualidade.
 - **Preservação da Lógica:** Todas as fórmulas de cálculo de área e custo permanecem intactas, operando agora de forma contínua sobre a opção selecionada.
+
+---
+
+## Migração para Supabase (Sessão: 22/02/2026 09:55)
+
+A aplicação evoluiu de um sistema baseado em arquivos JSON locais para uma infraestrutura robusta de banco de dados relacional com **Supabase (PostgreSQL)**.
+
+### Melhorias Implementadas:
+- **Persistência Global:** Acabou o problema de dessincronização entre redeploys no EasyPanel. Os dados agora residem em um banco de dados externo persistente.
+- **Alta Performance (Bulk Fetching):** O backend foi otimizado para carregar todos os materiais e históricos em uma única requisição, eliminando gargalos de rede.
+- **Base para Escalabilidade:** O novo schema permite a criação futura de perfis de usuários por empresa, gestão de estoque por obra e integração com CRM.
+- **Segurança de Dados:** Implementação inicial de validação via API REST com suporte a Row Level Security (RLS) no banco de dados.
+
+### O que foi migrado:
+- **133 Materiais:** Categorizados e estruturados.
+- **636 Preços Atuais:** Mapeados por fornecedor.
+- **432 Entradas de Histórico:** Preservando a evolução de custos ao longo do tempo.
