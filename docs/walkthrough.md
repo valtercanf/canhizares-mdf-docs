@@ -151,5 +151,10 @@ TOTAL:                                         R$974,33
 - **Fuso Horário**: A data do commit agora exibe explicitamente o timezone de Brasília `(GMT-3)`.
 - **Backend**: Refatorada a função `get_last_commit_date` em `app.py` para injetar o sufixo de fuso horário automaticamente.
 
+### 18. Hotfix: Correção de ReferenceError (h is not defined) (22/02/2026 16:30)
+- **Causa**: Variáveis de dimensão (`h`, `w`, `d`) e `typeSelect` não estavam sendo declaradas corretamente no loop de coleta de dados do frontend.
+- **Solução**: Atualizado `main.js` para capturar e sanitizar os valores dos inputs de cada módulo antes de processar o cálculo.
+- **Sincronia**: Alteração enviada para o GitHub para atualização imediata via EasyPanel.
+
 ---
 **Status Final**: Sistema V5.0 estável, maduro e com lógica de marcenaria de alto nível, pronto para uso profissional.
