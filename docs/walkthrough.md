@@ -142,8 +142,9 @@ TOTAL:                                         R$974,33
 
 ### 16. Estruturas Flexíveis e Ripas de Ligação (22/02/2026 16:00)
 - **Flexibilidade Total**: "Tampo Superior" e "Base Inferior" separados. Opção de "Engrosso" (moldura) automática para tampos.
-- **Ripas de Ligação**: Geradas automaticamente para unir módulos com tampos de cores diferentes.
+- **Ripas de Ligação**: Geradas automaticamente para unir módulos com tampos de cores diferentes. **Correção 15mm (0.015m)** aplicada conforme padrão técnico.
 - **Cores Mistas**: Lógica profissional de acabamento — ripa na cor do tampo com fita na cor da estrutura.
+- **Fixação**: Inclusão de 8 parafusos extras no orçamento.
 
 ### 17. Padronização de Versão e Timezone (22/02/2026 16:10)
 - **Tag de Versão**: Atualizado de `V4.0-carnaval` para `v5` em todo o frontend (`index.html` e `inventory.html`).

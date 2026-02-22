@@ -44,6 +44,7 @@ O sistema está **completo e funcional**, incluindo backend Python, interface we
 | Phase 20 | Refatoração Modular & Agrupamento Visual | ✅ Concluído |
 | Phase 21 | Estruturas Flexíveis & Engrosso de Tampo | ✅ Concluído |
 | Phase 22 | Ripas de Ligação & Cores Mistas | ✅ Concluído |
+| Phase 23 | Padronização de Versão (v5) | ✅ Concluído |
 
 > Para o detalhamento completo de cada fase, acesse [docs/task.md](docs/task.md).
 
