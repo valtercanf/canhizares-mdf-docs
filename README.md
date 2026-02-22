@@ -43,8 +43,8 @@ O sistema está **completo e funcional**, incluindo backend Python, interface we
 | Phase 19 | Migração para Supabase (Database Persistente) | ✅ Concluído |
 | Phase 20 | Refatoração Modular & Agrupamento Visual | ✅ Concluído |
 | Phase 21 | Estruturas Flexíveis & Engrosso de Tampo | ✅ Concluído |
-| Phase 22 | Ripas de Ligação & Cores Mistas | ✅ Concluído |
 | Phase 23 | Padronização de Versão (v5) | ✅ Concluído |
+| Phase 24 | Hotfix Cálculo & Modo Offline (Local) | ✅ Concluído |
 
 > Para o detalhamento completo de cada fase, acesse [docs/task.md](docs/task.md).
 
@@ -125,4 +125,4 @@ O sistema agora permite o acompanhamento de preços de múltiplos fornecedores e
     *   **Inteligência:** Ele identificará automaticamente a marca (Arauco, Duratex, etc.) e atualizará a coluna correta.
 
 ---
-*Última atualização: 2026-02-18 — Gerado por AI Assistant*
+*Última atualização: 22/02/2026 — Gerado por AI Assistant*
