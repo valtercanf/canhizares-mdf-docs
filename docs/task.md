@@ -379,3 +379,12 @@
 - [x] **JS:** Coletar `target_thickness` e enviar para o backend.
 - [x] **Backend:** Implementar lógica de múltiplas camadas de réguas (15mm cada) para atingir a espessura alvo.
 - [x] **Verify:** Validar cálculos de área e fitagem para tampos com diferentes espessuras finais.
+## [PHASE 27] MDF DETAILING & SUPPLIER ROLLBACK (23/02/2026)
+- [x] Backend: Incluir corrediças de gaveta na lista de peças (is_consumable: True) <!-- 11:30 -->
+- [x] UI: Prevenção de duplicatas limpando a visão ao alterar inputs ou recalcular <!-- 11:45 -->
+- [x] Excel: Adição de aba "Detalhamento" com lista técnica de peças <!-- 11:50 -->
+- [x] Rollback: Reversão da lógica automática de menor preço para MDF <!-- 12:00 -->
+- [x] UI: Seleção individual de fornecedor por linha de módulo MDF (Arauco padrão) <!-- 12:10 -->
+- [x] Logic: Uso do preço exato do fornecedor selecionado no cálculo de custos <!-- 12:20 -->
+- [x] UI: Remoção do Fornecedor Global para simplificação da interface <!-- 12:20 -->
+- [x] Verify: Validação final via scripts e teste em localhost <!-- 12:25 -->

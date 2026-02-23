@@ -170,4 +170,12 @@ TOTAL:                                         R$974,33
   3. Otimizar a performance da lista de materiais com filtros de busca no servidor.
 
 ---
-**Status Final**: Sistema V5.1 certificado matematicamente, timezone corrigido para Brasília (GMT-3) e suporte a engrosso customizado.
+
+### 21. Detalhamento Técnico e Reversão de Fornecedores (23/02/2026 12:30)
+- **Detalhamento de Ferragens**: Corrediças agora constam na lista de peças e no Excel ("Detalhamento").
+- **Fim das Duplicatas**: Interface limpa automaticamente resultados antigos ao detectar novas entradas.
+- **Escolha de Fornecedor**: A automação de "menor preço" foi removida para dar controle total ao marceneiro. Agora você escolhe o fornecedor (Arauco, Duratex, etc.) diretamente na linha do MDF.
+- **Cálculo Real**: O custo reflete exatamente a tabela do fornecedor escolhido, sem surpresas no orçamento final.
+
+---
+**Status Final**: Sistema V5.5 com controle manual de fornecedores, detalhamento técnico expandido e interface anti-duplicatas.
