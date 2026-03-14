@@ -178,4 +178,28 @@ TOTAL:                                         R$974,33
 - **Cálculo Real**: O custo reflete exatamente a tabela do fornecedor escolhido, sem surpresas no orçamento final.
 
 ---
-**Status Final**: Sistema V5.5 com controle manual de fornecedores, detalhamento técnico expandido e interface anti-duplicatas.
+
+### 22. Auditoria Matemática — Correção de Cálculos (14/03/2026 16:55)
+
+**Referência:** Planilha `reports/SOMA MATERIAL.xlsx`
+
+Comparação peça a peça revelou **6 discrepâncias** (total +1.27m² a mais no sistema). Todas corrigidas:
+
+| # | Correção | Arquivo |
+|---|----------|---------|
+| 1 | **Base/Topo separados** — Topo omitido auto quando há módulo tampo | `mdf_structure.py` |
+| 2 | **Rodapé automático** — Gerado para tipo `box` (50mm × perímetro) | `mdf_structure.py` |
+| 3 | **Engrosso corrigido** — Lateral usa `mw` (comprimento), Frt/Trás usa `md` (profundidade) | `mdf_structure.py` |
+| 4 | **Ripa de Ligação removida** — Não consta na planilha de referência | `mdf_structure.py` |
+| 5 | **Gavetas decompostas** — Corpo substituído por Frente/Traseira + Laterais individuais | `drawers.py` |
+| 6 | **Contra-frete adicionado** — Peça estrutural automática (material da estrutura) | `drawers.py` |
+
+**Resultado pós-correção (Auditoria V2):**
+```
+mdf_amadeirado_15mm: Planilha=2.6400 | Sistema=2.6400 | Diff=+0.0000 | OK
+mdf_branco_6mm:      Planilha=2.5200 | Sistema=2.5200 | Diff=+0.0000 | OK
+mdf_branco_15mm:     Planilha=1.6800 | Sistema=1.6800 | Diff=+0.0000 | OK
+```
+
+---
+**Status Final**: Sistema V5.6 com cálculos auditados, detalhamento completo (ferragens + insumos) e conformidade total com planilha SOMA MATERIAL.

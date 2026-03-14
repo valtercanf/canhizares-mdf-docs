@@ -4,7 +4,7 @@ Bem-vindo ao sistema de orçamento **Canhizares MDF**.
 Este projeto visa calcular custos, precificação e detalhamento de materiais para marcenaria (MDF) e serralheria (Metalon/Chapa).
 
 ## Status Atual
-O sistema está **completo e funcional**, incluindo backend Python, interface web moderna e exportação avançada de Excel.
+Sistema **v5.6** — completo, funcional e auditado. Backend Python modular, interface web premium e exportação Excel detalhada.
 
 ---
 
@@ -45,6 +45,7 @@ O sistema está **completo e funcional**, incluindo backend Python, interface we
 | Phase 21 | Estruturas Flexíveis & Engrosso de Tampo | ✅ Concluído |
 | Phase 23 | Padronização de Versão (v5) | ✅ Concluído |
 | Phase 24 | Hotfix Cálculo & Modo Offline (Local) | ✅ Concluído |
+| **Phase 25** | **Auditoria Matemática & Detalhamento Completo** | **✅ Concluído** |
 
 > Para o detalhamento completo de cada fase, acesse [docs/task.md](docs/task.md).
 
@@ -52,15 +53,18 @@ O sistema está **completo e funcional**, incluindo backend Python, interface we
 
 ## Funcionalidades Implementadas
 - **Cálculo de MDF:** Otimização para diferentes espessuras (3mm-25mm) e cores.
-- **Automatização de Fornecedores:** O sistema seleciona automaticamente o menor preço disponível no estoque.
-- **Engrosso de Tampo:** Moldura de moldura de 5cm automática para tampos superiores.
-- **Ripas de Ligação:** Geração de ripas para tampos de cores diferentes com acabamento coordenado (fita na cor da estrutura).
+- **Módulos Flexíveis:** Box (Base+Topo separados), Open Top, Tampo, Base e Peça Avulsa.
+- **Base/Topo Inteligente:** Detecção automática — se tampo existe, o topo do box é omitido.
+- **Rodapé Automático:** Gerado para módulos box (50mm × perímetro).
+- **Engrosso de Tampo:** Tiras de engrosso com dimensões auditadas (lateral ao longo do comprimento, frente/trás ao longo da profundidade).
+- **Gavetas Decompostas:** Frente/Traseira, Laterais e Fundo como peças individuais.
+- **Contra-frete Automático:** Peça estrutural gerada por gaveta (usa material da estrutura).
+- **Detalhamento 100%:** TODOS os itens do cálculo aparecem na descrição: MDF, ferragens, fita, cola, parafusos, sapatas, corrediças, puxadores.
+- **Automatização de Fornecedores:** Seleção manual ou automática do fornecedor.
 - **Cálculo de Insumos:** Cola (área), Fita de Borda (perímetro) e Parafusos automáticos.
-- **Serralheria V5.0:** Tubos (Metalon), Ferro Trefilado e Chapas com **Pintura Eletrostática**.
-- **Supabase Integration:** Banco de dados persistente para Materiais, Preços e Histórico.
-- **Detalhamento Agrupado:** Peças organizadas por Módulo e Categoria (Estrutura, Portas, etc.).
+- **Serralheria V5.0:** Tubos, Ferro Trefilado e Chapas com **Pintura Eletrostática**.
 - **Precificação Profissional:** Custo Material + Mão de Obra + Lucro = Preço de Venda.
-- **Exportação Excel:** Relatório completo com fornecedores e precificação detalhada.
+- **Exportação Excel:** Relatório com detalhamento + custos por fornecedor.
 
 ## Como Rodar o Projeto
 
@@ -91,19 +95,28 @@ canhizares-mdf/
 │   │   └── index.html          # Interface principal (Builder)
 │   └── static/js/
 │       ├── main.js             # Entry point do frontend
-│       ├── pricing.js          # Módulo de validação e exportação de precificação
-│       ├── ui.js               # Lógica de DOM e componentes dinâmicos
-│       ├── api.js              # Serviço de requisições HTTP
+│       ├── pricing.js          # Precificação e exportação
+│       ├── ui.js               # DOM e componentes dinâmicos
+│       ├── api.js              # Requisições HTTP
 │       └── validation.js       # Validação de formulário
 ├── execution/
-│   └── mdf_calculator.py       # Lógica central de cálculo e geração de Excel
+│   ├── mdf_calculator.py       # Orquestrador central de cálculo
+│   └── calculators/            # Módulos especializados
+│       ├── mdf_structure.py    # Estrutura (Box, Tampo, Open Top, Rodapé, Engrosso)
+│       ├── drawers.py          # Gavetas (Frente/Traseira, Laterais, Contra-frete)
+│       ├── doors.py            # Portas (Dobradiças, Puxadores)
+│       ├── shelves.py          # Prateleiras/Divisórias
+│       ├── metalwork.py        # Serralheria (Tubos, Chapas, Pintura)
+│       ├── costs.py            # Custos e geração de Excel
+│       └── utils.py            # Utilitários (preços, materiais)
 ├── data/
-│   ├── prices.json             # Base de dados de preços e materiais
-│   └── history.json            # Histórico de cálculos realizados
-├── tests/                      # Scripts de teste automatizado (Playwright + Pytest)
+│   ├── prices.json             # Base de preços e materiais
+│   └── history.json            # Histórico de cálculos
+├── reports/                    # Planilhas de referência (SOMA MATERIAL.xlsx)
+├── tests/                      # Testes automatizados
 └── docs/
-    ├── task.md                 # Timeline e tarefas do projeto
-    └── walkthrough.md          # Registro detalhado por sessão
+    ├── task.md                 # Timeline do projeto
+    └── walkthrough.md          # Registro por sessão
 ```
 
 ## Para Continuar o Desenvolvimento
@@ -125,4 +138,4 @@ O sistema agora permite o acompanhamento de preços de múltiplos fornecedores e
     *   **Inteligência:** Ele identificará automaticamente a marca (Arauco, Duratex, etc.) e atualizará a coluna correta.
 
 ---
-*Última atualização: 22/02/2026 — Gerado por AI Assistant*
+*Última atualização: 14/03/2026 — Sistema V5.6 com cálculos auditados e detalhamento completo*
