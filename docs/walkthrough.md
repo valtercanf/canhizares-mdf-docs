@@ -202,4 +202,20 @@ mdf_branco_15mm:     Planilha=1.6800 | Sistema=1.6800 | Diff=+0.0000 | OK
 ```
 
 ---
-**Status Final**: Sistema V5.6 com cálculos auditados, detalhamento completo (ferragens + insumos) e conformidade total com planilha SOMA MATERIAL.
+
+### 23. Refatoração de Código Limpo (14/03/2026 17:30)
+
+| Melhoria | Arquivo(s) |
+|----------|-----------|
+| **Constantes centralizadas** (WASTE_FACTOR, SCREWS_PER_M2, etc.) | `constants.py` (NOVO) |
+| **Consumíveis extraídos** (fita + cola) | `consumables.py` (NOVO) |
+| **PriceIndex** — busca O(1) por ID | `utils.py` |
+| **Fix defaults mutáveis** (`{}` → `None`) | `mdf_calculator.py` |
+| **Funções extraídas** (`_normalize_modules`, `_calculate_structural_hardware`, `_inject_details`) | `mdf_calculator.py` |
+| **DRY: `_parse_request_data`** — elimina 60 linhas duplicadas | `app.py` |
+| **Constantes usadas** em todos os calculadores | `mdf_structure.py`, `doors.py`, `drawers.py`, `costs.py` |
+
+**Validação**: Auditoria V2 (diff=0.0000) e Teste 3 Cenários — mesmos resultados pré e pós-refatoração.
+
+---
+**Status Final**: Sistema V5.7 com código limpo, modular e auditado.
